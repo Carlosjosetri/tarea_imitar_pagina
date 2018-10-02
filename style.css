@@ -14,17 +14,34 @@ body {
 
 
 header {
-background-image: url(img/1.jpg);
+background-image: url(re2.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
+position: relative;
 height: 26em;
 width: 100%;
 color: #ffffffff;
 font-weight: initial;
 
 }
+header::after{
+  width: 100%;
+  height: 100%;
+  content:"";
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0.8;
 
+    background-image: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+}
+
+header>*{
+  position: relative;
+  z-index: 1;
+
+}
 
 .container{
     background-color: #ffffffff;
@@ -42,14 +59,14 @@ font-weight: initial;
 
 
 
-.back{
+/* .back{
     position: relative;
     width: 100%;
-    height: 100%;     
+    height: 100%;
     background-image: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
     opacity: 0.8;
- 
-}
+
+} */
 
 h1 {
     font-size: 6em;
@@ -160,7 +177,7 @@ color: #222222;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     color: #ffffffff;
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
@@ -189,7 +206,7 @@ color: #222222;
     display: flex;
     flex-wrap:wrap;
     justify-content:space-between;
- 
+
 }
 
 .imae{
@@ -198,9 +215,9 @@ color: #222222;
 
 }
 .conti{
-   
+
     margin:  0.75em
-    
+
 }
 
 .conti:hover{
@@ -241,7 +258,7 @@ div#imagen {
     background-image: url(img/foto11.jpg);
     margin: 30px auto;
   }
-  
+
   div#info {
     position:absolute;
     overflow:hidden;
@@ -251,7 +268,7 @@ div#imagen {
     opacity:0;
     transition: opacity 0.3s;
   }
-  
+
   div#imagen:hover div#info {
     opacity:1;
   }
@@ -264,7 +281,7 @@ div#imagen {
   div#imagen4:hover div#info {
     opacity:1;
   }
-  
+
   p#headline {
     position: absolute;
     font-size: 1.5rem;
@@ -272,18 +289,18 @@ div#imagen {
     margin-top: 15px;
     transition: margin-left 0.3s;
   }
-  
+
   div#imagen:hover p#headline {
     margin-left: 115px;
   }
-  
+
   p#descripcion {
     font-size: 1rem;
     text-align: center;
     margin-top: 200px;
     transition: margin-top 0.4s;
   }
-  
+
   div#imagen:hover p#descripcion {
     margin-top: 75px;
   }
@@ -320,22 +337,22 @@ div#imagen {
 
     .container{
         margin: 0;
-        width: 100%; 
+        width: 100%;
     }
 
     h1 {
         font-size: 2em;
     }
-   
-    
-    
-    .texto{ 
-        font-size: 0.7rem; 
+
+
+
+    .texto{
+        font-size: 0.7rem;
 
     }
-     
-    .texto1{ 
-        font-size: 0.7em; 
+
+    .texto1{
+        font-size: 0.7em;
         padding: 0 5%;
 
     }
@@ -348,9 +365,9 @@ div#imagen {
     .SeccionBlanca {
         grid-template-columns: 1fr;
     }
-    
+
     .SeccionPa {
-        padding: 5% 5% 0 5%; 
+        padding: 5% 5% 0 5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -376,9 +393,9 @@ div#imagen {
     margin: 4% 3%;
     }
 
-   
 
-   
+
+
 }
 
 
@@ -445,5 +462,3 @@ div#imagen {
   .change .bar5{
     transform:rotate(-45deg);
   }
- 
-
